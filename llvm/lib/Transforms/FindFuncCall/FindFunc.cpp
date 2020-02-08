@@ -314,14 +314,14 @@ namespace {
                         // Print some format charactors
                         for (int k=0; k<depth; k++)
                             errs() << "    ";
-                        // // Move the cursor to print '|', in order to connect nearest brother node
-                        // for (int k=0; k<temp_sum; k++) {
-                        //     MOVEUP(1);
-                        //     errs() << "|";
-                        //     MOVEDLEFT(1);
-                        // }
-                        // // Reset the cursor
-                        // MOVEDOWN(temp_sum);
+                        // Move the cursor to print '|', in order to connect nearest brother node
+                        for (int k=0; k<temp_sum; k++) {
+                            MOVEUP(1);
+                            errs() << "|";
+                            MOVEDLEFT(1);
+                        }
+                        // Reset the cursor
+                        MOVEDOWN(temp_sum);
                         // Reset the temp counter
                         temp_sum = 0;
                         // Output function name
