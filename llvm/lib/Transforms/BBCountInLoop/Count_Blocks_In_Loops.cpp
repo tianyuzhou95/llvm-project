@@ -32,11 +32,10 @@ namespace {
             }
         }
         
-        bool runOnFunction(Function &F) {
+        bool runOnFunction(Function &F) override {
             errs() << "Function " << F.getName() << "\n";
 
             LoopInfo &LI = getAnalysis<LoopInfoWrapperPass>().getLoopInfo();
-            int loopCounter = 0;
             for (LoopInfo::iterator i = LI.begin(), e = LI.end(); i != e; i++) {
                 countBlocksInLoop(*i, 0);
             }
