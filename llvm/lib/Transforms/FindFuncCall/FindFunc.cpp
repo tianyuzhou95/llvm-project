@@ -41,7 +41,7 @@ namespace {
             // syscall_set.insert("gvisor.x2edev..z2fgvisor..z2fpkg..z2fsentry..z2ffs.File.Readv");
 
             // fully support
-            syscall_set.insert(head + "Read");
+            // syscall_set.insert(head + "Read");
             // syscall_set.insert(head + "Write");
             // syscall_set.insert(head + "Close");
             // syscall_set.insert(head + "Stat");
@@ -126,7 +126,7 @@ namespace {
             // syscall_set.insert(head + "Setreuid");
             // syscall_set.insert(head + "Setregid");
             // syscall_set.insert(head + "Getgroups");
-            // syscall_set.insert(head + "Setgroups");
+            syscall_set.insert(head + "Setgroups");
             // syscall_set.insert(head + "Setresuid");
             // syscall_set.insert(head + "Getresuid");
             // syscall_set.insert(head + "Setresgid");
